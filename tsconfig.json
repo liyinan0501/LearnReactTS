@@ -1,26 +1,40 @@
 {
+  // typescript 配置选项：
   "compilerOptions": {
+    // target: typescript 需要转成 js 代码，转成 js 代码的目标版本。
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    // lib: typescript 内置的库。
+    // esnext 包含了所有的api ES2015 到最近的。
+    "lib": ["dom", "dom.iterable", "esnext"],
+    // 是否允许编译 js 文件，既能编译 js 也能编译 ts 文件。
     "allowJs": true,
+    // 是否跳过库的检查，引入的第三方的库，不会检查库写的是否有问题。
     "skipLibCheck": true,
+    // 是否屏蔽 ESModule 和 CommonJs 之间的差异。用ES6的模块化和nodejs的模块化，引入可以用require或者import。
     "esModuleInterop": true,
+    // 是否允许通过 import x from 'y' 即使模块没有显示指定的 default 导出。
     "allowSyntheticDefaultImports": true,
+    // 是否开启严格模式。
+    // 不开例如 NullCheck 不会区分 null 和 undefined
     "strict": true,
+    // 是否对文件名区分大小写。
     "forceConsistentCasingInFileNames": true,
+    // 是否为 switch 语句启用错误报告，例如忘写 break，return 会报错。
     "noFallthroughCasesInSwitch": true,
+    // 生成的模块化的标准。
     "module": "esnext",
+    // 模块解析查找策略 node_modules 一层层路径查找。
     "moduleResolution": "node",
+    // 是否允许导入扩展名为.json的模块。
     "resolveJsonModule": true,
+    // 是否允许将没有 import/export 的文件视为旧（全局化非模块化）脚本文件。
     "isolatedModules": true,
+    // 是否允许编译时不生成任何文件（只进行类型检查）。TS 文件编译时候，不会转成新的 JS 文件。
+    // 就代表：TS 只会做类型检查，不会把 TS 编译成 JS 文件。
     "noEmit": true,
+    // 指定将 JSX 用什么规范编译。
     "jsx": "react-jsx"
   },
-  "include": [
-    "src"
-  ]
+  // typescript 需要生效的范围
+  "include": ["src"]
 }

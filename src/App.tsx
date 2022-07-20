@@ -1,8 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import logo from './logo.svg'
+import './App.css'
 
 function App() {
+  // 创建 TS 的 React 项目：npx create-react-app ts-demo --template typescript
   return (
     <div className="App">
       <header className="App-header">
@@ -20,7 +21,7 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
